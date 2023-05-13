@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>admin login</title>
+<style>
+		body{
+			text-align:Center;
+		}
+		label{
+			display:inline-block;
+			width:180px;
+			font-size: 25px;
+		}
+        body {
+           background-image: url('img.jpg');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+               background-size: cover;
+            }
+			#btn1{
+   margin-right: 20px;
+   border-radius: 4px;
+   color: #CAD6F0;
+   background-color:#b50000;
+   border: none;
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+   	#btn2{
+   	    margin-left: 20px;
+		   border-radius: 4px;
+		   color: #CAD6F0;
+		   background-color:#b50000;
+		   border: none;
+		   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+   	}
+	</style>
+	<script>
+		function validate()
+		{
+			var name = document.getElementById("name").value;
+			var password = document.getElementById("pswd").value;
+			if(name.length<3)
+				alert("Atleast 3 characters is required...");
+			else if(password.length<5)
+				alert("Password must be minimum 6 characters");
+                                                
+		}
+
+	</script>
+
+</head>
+<body>
+<br>
+<br>
+
+<img src="au.png" alt="Italian Trulli">
+
+<h1>Anurag University Library</h1>
+	<h2>ADMIN LOGIN</h2>
+	<form action="admindemo.php" method= "post">
+	<table>
+		<tr>
+			<label> Name:</label>
+			<input type = " text" id="name" name="name" minlength="3" required>
+		</tr>
+		<br/><br/>
+		<tr>
+			<label>Password:</label>
+			<input type="password" id = "pswd" name = "pswd" min length="6"  pattern="(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter" required>
+        </tr>
+		<br/><br/>
+		<tr>
+			<input type="submit" id=btn1 value = "LOGIN">
+			<input type ="reset" id=btn2 value = "CLEAR" >
+		</tr>
+	</table>
+	</form>
+	
+	
+</form>
+</body>
+</html>

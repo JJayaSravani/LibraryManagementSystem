@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login Form</title>
+	<style>
+		body{
+			text-align:Center;
+		}
+		label{
+			display:inline-block;
+			width:180px;
+			font-size: 25px;
+		}
+        body {
+           background-image: url('img.jpg');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+               background-size: cover;
+            }
+			.btn{
+				background-color:#1D2C50;
+				border-radius: 4px;
+				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+				border: none;
+				color: #CAD6F0;
+				position: absolute;
+  right: 50px;
+  top: 50px;
+			}
+			#btn1{
+   margin-right: 20px;
+   border-radius: 4px;
+   background-color:#b50000;
+   border: none;
+   color: #CAD6F0;
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+   
+}
+   	#btn2{
+   	    margin-left: 20px;
+		   border-radius: 4px;
+		   background-color:#b50000;
+		   color: #CAD6F0;
+		   border: none;
+		   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+   	}
+	   .logoutLblPos{
+
+position:fixed;
+right:10px;
+top:5px;
+}
+	</style>
+	<script>
+		function validate()
+		{
+			var name = document.getElementById("name").value;
+			var password = document.getElementById("pswd").value;
+			if(name.length<8)
+				alert("Atleast 8 characters is required...");
+			else if(password.length<6)
+				alert("Password must be more than 8 characters");
+                                                
+		}
+	</script>
+
+</head>
+<body>
+<br>
+<br>
+<form action="admin_login_validate.html" method= "post" >
+	<button class="btn">ADIMIN LOGIN</button></form>
+<img src="au.png" alt="Italian Trulli">
+
+<h1>Anurag University Library</h1>
+	<h2>LOGIN</h2>
+	<form action="connection.php" method="post" >
+	<table>
+		<tr>
+			<label> Name:</label>
+			<input type = " text" id="name" name="name" minlength="8" required>
+		</tr>
+		<br/><br/>
+		<tr>
+			<label>Hall Tickect No: </label>
+			<input type = " text" id="htn" name="htn" required>
+		</tr>
+		<br/><br/>
+		<tr>
+			<label>Password:</label>
+			<input type="password" id = "pswd" name = "pswd" minlength="6" required>
+		</tr>
+		<br/><br/>
+		<tr>
+			<input type="submit" id=btn1 value = "LOGIN">
+			<input type ="reset" id=btn2 value = "CLEAR" >
+		</tr>
+	</table>
+	</form><br><br>
+	
+
+</body>
+</html>
